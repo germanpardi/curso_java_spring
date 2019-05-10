@@ -11,20 +11,30 @@ package beans;
  */
 public class ClienteInvitado extends Cliente {
 
-    public ClienteInvitado(String id_usuario, String email, int edad, String telefono, String genero) {
+    public ClienteInvitado(String id_usuario, String email, int edad, String telefono, String genero, int duracionMax) {
         super(id_usuario, email, edad, telefono, genero);
+        this.duracionMax= duracionMax;
     }
     
-    private int duración_max;
+    private int duracionMax;
 
-    public int getDuración_max() {
-        return duración_max;
+    public int getDuracionMax() {
+        return duracionMax;
     }
 
-    public void setDuración_max(int duración_max) {
-        this.duración_max = duración_max;
+    public void setDuracionMax(int duracionMax) {
+        this.duracionMax = duracionMax;
     }
     
+    @Override
+    public void mostrar(){
+        System.out.print("INVITADO ");
+        super.mostrar();
+        System.out.println("Max Duración: " + this.duracionMax + "\n");
+        //System.out.println("Cliente "+ id_usuario); Habris que cambiar estas propiedades a protected, asì al esta clase ser hija, puede acceder.
+        //System.out.println("Email: "+ this.email);
+        //System.out.println("Edad: "+ this.getEdad());
+    }
     
     
 }

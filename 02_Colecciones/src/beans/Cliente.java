@@ -5,6 +5,9 @@
  */
 package beans;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Admin
@@ -66,15 +69,23 @@ public class Cliente {
     }
 
     public Cliente(String id_usuario, String email, int edad, String telefono, String genero) {
+        
+        
+            //throw new Exception("Nombre de cliente inválido");
+            
+        
         this.id_usuario = id_usuario;
         this.email = email;
         this.edad = edad;
         this.telefono = telefono;
         this.genero = genero;
+    }        
+    
+    public void mostrar(){
+        
+        System.out.println("Cliente "+ id_usuario);
+        System.out.println("Email: "+ this.email);
+        System.out.println("Edad: "+ this.getEdad()+"\n");
     }
-    
-    
-    
-    
     
 }
