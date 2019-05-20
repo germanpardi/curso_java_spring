@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang= "es">	<!-- Comentario: Nodo raiz-->
+	<head>			<!-- Cabecera: Información de la página-->
+		<meta charset="UTF-8"/>
+		<title>Formularios</title>
+                <style type="text/css">
+                    form{
+                        background-color: #AAFFAA;
+                        padding: 40px;
+                    }
+                </style>
+                    
+	</head>
+	
+	<body>			<!-- Cuerpo visible en la ventana-->
+		<h1>Formularios</h1>
+                <form action="mailto:correo@empresa.com"
+                      method="post" enctype="text/plain">
+                    <label> Nombre:</label>
+                          <input type="text" name="nombre" id="nombre" size="30" maxlength="255" placeholder="Nombre"/><br/>
+                    <label> Email: </label>
+                          <input type="text" name="email" id="email" size="30" maxlength="255"/><br/>
+                    <label> Edad: </label>
+                          <input type="number" name="edad" id="edad" min="18" max="80" step="1"/><br/>      
+                          
+                          <input type="submit" value="Enviar formulario"/>
+                          <input type="reset" value="Borrar Fomulario"/>
+                </form>
+                <script>
+                    var texto = "Un texto cualquiera";
+                    var numero = 10.908;
+                    var campoNombre = document.getElementById("nombre");
+                    campoNombre.value="";
+                    document.getElementById("email").setAttribute("placeholder","Correo");
+                    document.getElementById("edad").value="30";
+                </script>
+                    
+	</body>
+</html>

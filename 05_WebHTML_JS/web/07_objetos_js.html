@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <input type="button" id="btn" value = "Probar"/>
+        <div id="divDatos">TODO write content</div>
+        <script>
+            
+            function mostrarDatos(){
+                var divDatos = document.getElementById("divDatos");
+                divDatos.innerHTML+="Datos de objetos ";
+                var objCliente = new Object();
+                objCliente.nombre = "Juan";
+                objCliente.edad = 27;
+                objCliente["activo"]= true;
+                objCliente.toString = function(){
+                    return "Nombre: "+this.nombre+ " Edad: "+this.edad+" Activo: "+this.activo;
+                };
+                divDatos.innerHTML += objCliente.toString();
+                
+                var funATexto = new Function("param","return this.nombre + param");
+                funATexto.propiedadSinSentido = "No tengo razón para vivir";
+                objCliente.aTexto = funATexto;
+                divDatos.innerHTML+= objCliente.aTexto("VALOR 1", "VALOR 2");
+                var otroCliente = {
+                    "nombre":"Luis",
+                    "edad":37,
+                    "activo": true,
+                    "enTexto": function(){
+                        return "Cli "+this.nombre;}
+                };
+                
+                //OBJETO CLIENTE DE TIPO FUNCION... UNA ESPECIE DE CONSTRUCTOR;
+                var Cliente = function(nom, edad){
+                    this.nom = nom; 
+                    this. edad = edad;
+                    this.toString = function(){
+                        "Cliente: "+this.nom + " Edad: "+this.edad;
+                    };
+                }
+                var miCliente = new Cliente("Ana", 30);
+                divDatos.innerHTML += miCliente.toString();
+                
+                var otroCliente = {"nombre": "pepitoooooo", 
+                                   "edad": 24, 
+                                   "listado":[1,2,3,4],
+                                   "tienda":{"MamaloJS": "MAMALO", "QUE GUEVO TAN AZUL":100},
+                                   "enTexto": function(){return "Cli "+ this.nombre;}};
+                
+                divDatos.innerHTML+= otroCliente.enTexto + ">" + otroCliente.edad;
+                
+                for (var clave in otroCliente){
+                    divDatos.innerHTML += "<br/>" + otroCliente[clave];
+                }
+                                   
+             }   
+                var btn = document.getElementById("btn");
+                btn.onclick = mostrarDatos;
+                //btn.addEventListener("click",mostrarDatos); //LO MISMO QUE LA LINEA ANTERIOR
+            class ClaseCliente{// AZÚCAR SINTÁCTICO PARA LO MISMO QUE ANTES DE LOS OBJETOS! (LO MISMO QUE YA VENIAMOS HACIENDO, PERO PARA QUE SEA MAS FAMILIAR)
+                constructor(nombre, edad, act){
+                    this.nombre = nombre;
+                    this.edad=edad;
+                    this.act=act;
+                    this.enTexto = function(){
+                        return "Cli "+ this.nombre;
+                    };
+                }
+                
+            }
+            //MÈTODO COMÚN (DE CLASE) COMO EN JAVA... SI LE QUITAMOS EL PROTOTYPE SE VUELVE COMO UN MÉTODO STATIC.
+            Cliente.prototype.enTexto=function(){
+                    return "Cli "+ this.nombre;
+                };
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Otros Campos</h1>
+        <form action="#"
+              method="post" enctype="text/plain">
+            <input type="button" value="Boton JS" onclick="mostrarMensaje('Hola de nuevo')"/><br/>
+            <label for="fichero">Fichero</label>
+            <input type="file" id="fichero" name="fichero"/><br/>
+            
+            <label for="fecha">Fecha</label>
+            <input type="datetime" id="fecha" name="fecha"/><br/>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/><br/>
+            
+            <label for="password-enc">Campo no visible</label>
+            <input type="hidden" id="password-enc" name="password-enc" value = "sjdsada"/><br/>
+            
+            <input type="checkbox" checked="checked" id="checkbox" name="checkbox"/>
+            
+            <br/>Opciones:</br>
+                <input type="radio"  id="tipoCliente" name="Cliente" value = "Cliente"/>Cliente<br/>
+                <input type="radio"  id="tipoCliente" name="ClienteInvitado" value = "ClienteInvitado"/>ClienteInvitado</br>
+                <input type="radio"  id="tipoCliente" name="ClienteVIP" value = "ClienteVIP"/>ClienteVIP</br>
+                
+                 Frecuencia: 
+                 <select id="frecuencia" name="frecuencia">
+                     <option value="1">Varias veces al día</option>
+                     <option value="2">Una vez al día</option>
+                     <option value="3">Varias veces a la semana</option>
+                     <option value="4">Varias veces al mes</option>
+                     
+                 </select><br/>
+            
+                 Tabla:<table border="2">
+                     <caption>Lista de vainas</caption>
+                     <tr>
+                         <td>Vaina: </td>
+                         <td>Peine</td>
+                         <td>15 euros</td>
+                     </tr>
+                     <tr>
+                         <td>Vaina: </td>
+                         <td>Quitapelos</td>
+                         <td>50 euros</td>
+                     </tr>
+                     <tr>
+                         <td>Vaina: </td>
+                         <td>Un coche</td>
+                         <td>5000 euros</td>
+                     </tr>
+                 </table>
+                 
+                 <img alt="img" src="https://s3.amazonaws.com/images.seroundtable.com/google-g-groupon-g-1441368832.gif"><br/>
+                 <img alt="img" 
+                      src="https://media1.tenor.com/images/b55e24a1f9b7af7c3a82a672569d1027/tenor.gif?itemid=13174976"
+                      style = "width:400px; height:350px"/><br/>
+                 
+            
+            
+            
+        </form>
+        <script src="js/04_mascampos.js"></script>
+            
+    </body>
+</html>

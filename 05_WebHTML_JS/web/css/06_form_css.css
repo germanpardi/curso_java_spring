@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17-may-2019, 13:26:10
+    Author     : Admin
+*/
+
+
+
+/* TODAS LAS ETIQUETAS TENDRAN ESTE ESTILO:... MARGIN... MARGEN EXT, PADDING MARGEN INTERIOR*/
+*{
+    margin:0px;
+    padding:0px
+}
+
+/* SELECTOR DE ETIQUETA... TODAS LAS DE ESTE NOBRE, EN ESTE CASO, TODOS LOS FORM */
+form{
+    background-color: #AAFFAA;
+    padding: 10px;
+    display:block;
+}
+
+/*TODOS LOS DESCENDIENTES DE FORM ... TAMBIEN: form label, form input{}*/ 
+form div{
+    display: block;
+}
+.margenLateral{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.centrar{
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+label{
+    width: 20%;
+    display: inline-block;
+}
+#email{
+    font-size: 1.2em;
+}
